@@ -1,9 +1,36 @@
-\section{Capitulo 1}
-    Binarios, son las bases de los sistemas digitales. Todos los
-    sistemas digitales trabajan con binarios. En este capitulo se
-    explican los conceptos básicos de los sistemas digitales y se
-    introducen los conceptos de los sistemas digitales. Se explica
-    la representación de los números binarios, la conversión de
-    binario a decimal y viceversa. Se explica la aritmética binaria
-    y la suma y resta de números binarios. Prueba de que no me lo harte
+\section{Sistemas Binarios}
+
+\subsection{Sistemas Digitales}
+
+Los sistemas digitales son aquellos que manipulan y trabajan con elementos discretos de información, 
+representados de una forma binaria. Una característica importante de los sistemas digitales es su 
+capacidad de manipular elementos discretos de información. Estos elementos se representan por 
+cantidades físicas llamadas señales digitales. 
+
+Casi todos los sistemas digitales están basados en dos valores discretos, los cuales conocemos como binarios. 
+Un dígito binario puede tener dos valores: 0 o 1. Estos valores se les llaman bits. Estos bits son los que producen 
+los códigos binarios que se utilizan en los sistemas digitales, a estos les llamamos códigos binarios.
+
+\subsection*{HDL}
+
+Es de suma importancia el conocimiento del lenguaje HDL (Hardware Description Language). Este lenguaje 
+tiene como función la descripción de hardware. Se parece a un lenguaje de programación, 
+permitiendo describir circuitos digitales en forma textual. Además, nos sirve para simular sistemas digitales 
+y verificar su funcionamiento.
+
+\begin{center}
+    \begin{tikzpicture}[node distance=1.5cm]
+
+        % Nodos sin figuras
+        \node (main) {\textbf{Sistema Digital}};
+        \node (sub1) [below of=main] {\textbf{Manejo de información discreta}};
+        \node (sub2) [below of=sub1] {\textbf{Representación binaria}};
+
+        % Flechas
+        \draw[arrow] (main) -- (sub1);
+        \draw[arrow] (sub1) -- (sub2);
         
+    \end{tikzpicture}
+\end{center}
+
+\subsection{Números Binarios}
