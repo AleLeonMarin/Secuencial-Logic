@@ -34,3 +34,107 @@ y verificar su funcionamiento.
 \end{center}
 
 \subsection{Números Binarios}
+
+En el sistema decimal conocemos que existen los millares, centenas, decenas, etc. Las cuales son 
+potencias de 10 que están implícitas en la posición de los coeficientes. Si queremos ser más exactos, 
+deberíamos escribir un número decimal así:
+
+\begin{equation}
+    1234 = 1 \cdot 10^3 + 2 \cdot 10^2 + 3 \cdot 10^1 + 4 \cdot 10^0
+\end{equation}
+
+No obstante, por la convención y facilidad de escritura, se escriben únicamente los coeficientes y se deducen 
+las potencias necesarias de 10 de la posición que dichos coeficientes ocupan. Por lo tanto, un número decimal
+con punto se representa con una serie de coeficientes, así:
+
+\begin{equation}
+    a_5a_4a_3a_2a_1a_0 \cdot a_{-1}a_{-2}a_{-3}a_{-4}a_{-5} 
+\end{equation}
+
+Los coeficientes $a_j$ son cualesquiera de los 10 dígitos decimales (0, ... , 9); el valor del subíndice j indica el 
+valor de posición y, por lo tanto, la potencia 10 por la que se deberá multiplicar el coeficiente.
+
+\begin{equation}
+    10^5a_5 + 10^4a_4 + 10^3a_3 + 10^2a_2 + 10^1a_1 + 10^0a_0 + 10^{-1}a_{-1} + 10^{-2}a_{-2} + 10^{-3}a_{-3} 
+\end{equation}
+
+El sistema decimal actual es en base 10 porque usa 10 dígitos y los coeficientes se multiplican por 10. Pero el sistema
+binario es en base 2 porque usa 2 dígitos, sus coeficientes solo pueden tener 2 valores: 0 o 1. Cada coeficiente se 
+multiplicará por $2^j$ donde j es el valor del subíndice. Por lo tanto, un número binario se escribe así:
+
+\begin{equation}
+    a_n \cdot r^n + a_{n-1} \cdot r^{n-1} + ... + a_1 \cdot r^1 + a_0 \cdot r^0 + a_{-1} \cdot r^{-1} + a_{-2} \cdot r^{-2} + ... + a_{-m} \cdot r^{-m}
+\end{equation}
+
+Un ejemplo de un número binario es el siguiente:
+
+\begin{equation}
+    11010.11 = 1 \cdot 2^4 + 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^0 + 0 \cdot 2^{-1} + 1 \cdot 2^{-2} = (26.75)_{10}
+\end{equation}
+
+El valor de los coeficientes $a_j$ varía entre 0 y $r-1$. Para poder distinguir entre números de diferentes bases, 
+encerramos los coeficientes en paréntesis y se añade un subíndice que indica la base del número. 
+Por ejemplo, el número $(4021.2)_5$
+
+\begin{equation}
+    (4021.2)_5 = 4 \cdot 5^3 + 0 \cdot 5^2 + 2 \cdot 5^1 + 1 \cdot 5^0 + 2 \cdot 5^{-1} = (511.4)_{10}
+\end{equation}
+
+\subsubsection{Bases Numéricas}
+
+En el mundo actual usamos diferentes bases numéricas, las cuales nos facilitan la representación de números. 
+Las bases que más se usan son las siguientes:
+
+\begin{itemize}
+    \item Bases 2 (Binario)
+    \item Bases 8 (Octal)
+    \item Bases 10 (Decimal)
+    \item Bases 16 (Hexadecimal)
+\end{itemize}
+
+A continuación, se muestra una tabla con los valores de las bases numéricas:
+
+\begin{table}[h]
+    \centering
+    \setlength{\tabcolsep}{12pt}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Base Decimal} & \textbf{Base Binaria} & \textbf{Base Octal} & \textbf{Base Hexadecimal} \\
+        \hline
+        \texttt{00} & 0000 & 00 & 0 \\
+        \texttt{01} & 0001 & 01 & 1 \\
+        \texttt{02} & 0010 & 02 & 2 \\
+        \texttt{03} & 0011 & 03 & 3 \\
+        \texttt{04} & 0100 & 04 & 4 \\
+        \texttt{05} & 0101 & 05 & 5 \\
+        \texttt{06} & 0110 & 06 & 6 \\
+        \texttt{07} & 0111 & 07 & 7 \\
+        \texttt{08} & 1000 & 10 & 8 \\
+        \texttt{09} & 1001 & 11 & 9 \\
+        \texttt{10} & 1010 & 12 & A \\
+        \texttt{11} & 1011 & 13 & B \\
+        \texttt{12} & 1100 & 14 & C \\
+        \texttt{13} & 1101 & 15 & D \\
+        \texttt{14} & 1110 & 16 & E \\
+        \texttt{15} & 1111 & 17 & F \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\newpage
+
+Aquí veremos unos ejemplos de conversión de bases numéricas:
+
+\begin{itemize}
+    \item \textbf{Binario a Decimal:} $(110101)_2 = 1 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0 = (53)_{10}$
+    \item \textbf{Octal a Decimal:} $(127.4)_8 = 1 \cdot 8^2 + 2 \cdot 8^1 + 7 \cdot 8^0 + 4 \cdot 8^{-1} = (87.5)_{10}$
+    \item \textbf{Hexadecimal a Decimal:} $(B65F)_{16} = 11 \cdot 16^3 + 6 \cdot 16^2 + 5 \cdot 16^1 + 15 \cdot 16^0 = (46,687)_{10}$
+    \item \textbf{Decimal a Binario:} $(13.75)_{10} = (1101.11)_2$
+    \item \textbf{Decimal a Octal:} $(83.5)_{10} = (123.4)_8$
+    \item \textbf{Decimal a Hexadecimal:} $(26.1875)_{10} = (1A.3)_{16}$
+\end{itemize}
+
+\subsubsection{Numeros Octales y Hexadecimales}
+
+
